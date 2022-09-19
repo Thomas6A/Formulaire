@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <form action="validation.php" method="post">
+
+        <fieldset>
+            <legend>Identité</legend>
+
+
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input id="age" type="number" name="age" value="16" required min="16" />
+            <br><br>
+
+            <label for="homme">Sexe:</label>
+
+            <input type="radio" id="homme" name="sexe" value="homme" required />
+            <label for="homme">Homme</label>
+
+            <input type="radio" id="Femme" name="sexe" value="femme" />
+            <label for="Femme">Femme</label>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Coordonnées</legend>
+            <label for="emailAddress">Votre adresse mail:</label>
+            <input id="emailAddress" type="email" size="64" maxlength="64" required placeholder="nom@gmail.com" />
+            <br><br>
+            <label for="adresse">Adresse Postale:</label>
+            <input type="text" id="adresse" name="adresse" required>
+
+            <label for="codepostale">Code Postale:</label>
+            <input type="tel" id="codepostale" name="codepostale" required pattern="[0-9]{5}" />
+
+            <label for="Ville">Ville:</label>
+            <input type="text" id="Ville" name="Ville" required>
+
+
+
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Information Complémentaire</legend>
+
+
+            <label for="job">Activité Professionnelle:</label>
+
+            <select name="job" id="job">
+                <option value="sans">Sans activité professionnelle</option>
+                <option value="Ouvrier">Ouvrier</option>
+                <option value="Cadre">Cadre</option>
+                <option value="Retraité">Retraité</option>
+            </select>
+            <br><br>
+
+            <label for="Nationalité">Votre Nationalité:</label>
+
+            <select name="Nationalité" id="Nationalité">
+                <option value="Français" selected>Français</option>
+                <option value="Anglais">Anglais</option>
+                <option value="Allemand">Allemand</option>
+                <option value="Japonais">Japonais</option>
+            </select>
+            <br><br>
+
+            <label for="date_Naissance">Votre Date de Naissance:</label>
+
+            <input type="date" id="date_Naissance" name="date_Naissance" value="2000-07-22" min="1900-01-01"
+                max="2004-01-01">
+
+            <br><br>
+
+            <label for="Pays_Naissance">Votre Pays de Naissance:</label>
+
+            <select name="Pays_Naissance" id="Pays_Naissance">
+                <option value="France" selected>France</option>
+                <option value="Angleterre">Angleterre</option>
+                <option value="Allemagne">Allemagne</option>
+                <option value="Japon">Japon</option>
+            </select>
+
+            <br><br>
+
+            <label for="SécuritéSociale">Numéro de Sécurité Sociale:</label>
+            <input type="tel" id="SécuritéSociale" name="SécuritéSociale" required pattern="[0-9]{13}" />
+
+            <br><br>
+
+            <label for="NuméroPasseport">Numéro de Passeport:</label>
+            <input type="text" id="NuméroPasseport" name="NuméroPasseport" required minlength="9" maxlength="9" />
+
+            <br><br>
+
+
+            <label for="date_Déliverance">Date de Déliverance de Passeport</label>
+
+            <input type="date" id="date_Déliverance" name="date_Déliverance" value="2015-12-12" min="1900-01-01"
+                max="2023-01-01">
+            <br><br>
+
+            <label for="date_Validité">Date de Validité de Passeport</label>
+
+            <input type="date" id="date_Validité" name="date_Validité" value="2023-12-12" min="2020-01-01"
+                max="2025-01-01">
+
+
+
+
+        </fieldset>
+
+
+
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Annuler" />
+
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>
